@@ -4,8 +4,16 @@ $data = [
     [
         'id' => 'B-001',
         'title' => 'Jane Eyre',
+        'genre' => 'Hybrid of: Gothic, romance novel and Bildungsroman',
         'price' => '$8.89',
         'type' => 'novel',
+        'lang' => 'English',
+        'written' => [
+            'time' => '1847',
+            'place' => 'London'
+        ],
+        'publication' => '1847',
+        'publisher' => 'Smith, Elder, and Co, Cornhill',
         'desc' => 'Jane Eyre is a young orphan being raised by Mrs. Reed, her cruel, wealthy aunt. A servant named Bessie provides Jane with some of the few kindnesses she receives, telling her stories and singing songs to her. One day, as punishment for fighting with her bullying cousin John Reed, Jane’s aunt imprisons Jane in the red-room, the room in which Jane’s Uncle Reed died. While locked in, Jane, believing that she sees her uncle’s ghost, screams and faints. She wakes to find herself in the care of Bessie and the kindly apothecary Mr. Lloyd, who suggests to Mrs. Reed that Jane be sent away to school. To Jane’s delight, Mrs. Reed concurs.',
         'quotes' => [
             'Love' => [
@@ -48,8 +56,16 @@ $data = [
     [
         'id' => 'B-002',
         'title' => 'Wuthering Heights',
+        'genre' => 'Gothic Novel, Realist fiction',
         'price' => '$5.99',
         'type' => 'novel',
+        'lang' => 'English',
+        'written' => [
+            'time' => '1846-1847',
+            'place' => 'Village of Haworth, in Yorkshire'
+        ],
+        'publication' => '',
+        'publisher' => 'Thomas',
         'desc' => 'In the late winter months of 1801, a man named Lockwood rents a manor house called Thrushcross Grange in the isolated moor country of England. Here, he meets his dour landlord, Heathcliff, a wealthy man who lives in the ancient manor of Wuthering Heights, four miles away from the Grange. In this wild, stormy countryside, Lockwood asks his housekeeper, Nelly Dean, to tell him the story of Heathcliff and the strange denizens of Wuthering Heights. Nelly consents, and Lockwood writes down his recollections of her tale in his diary; these written recollections form the main part of Wuthering Heights.',
         'author' => 'Emily Brontë',
         'quotes' => [
@@ -92,8 +108,16 @@ $data = [
     [
         'id' => 'B-003',
         'title' => 'Moby Dick',
+        'genre' => 'Epic, adventure story, quest tale, allegory, tragedy',
         'price' => '$15.99',
         'type' => 'novel',
+        'lang' => 'English',
+        'written' => [
+            'time' => '1850-1851',
+            'place' => 'Pittsfield, Massachusetts, and NYC (New York City)'
+        ],
+        'publication' => '1851',
+        'publisher' => 'Smith, Elder, and Co, Cornhill',
         'desc' => 'Ishmael, the narrator, announces his intent to ship aboard a whaling vessel. He has made several voyages as a sailor but none as a whaler. He travels to New Bedford, Massachusetts, where he stays in a whalers’ inn. Since the inn is rather full, he has to share a bed with a harpooner from the South Pacific named Queequeg. At first repulsed by Queequeg’s strange habits and shocking appearance (Queequeg is covered with tattoos), Ishmael eventually comes to appreciate the man’s generosity and kind spirit, and the two decide to seek work on a whaling vessel together. They take a ferry to Nantucket, the traditional capital of the whaling industry.',
         'author' => 'Herman Melville',
         'quotes' => [
@@ -120,10 +144,18 @@ $data = [
     [
         'id' => 'B-004',
         'title' => 'The Great Gatsby',
+        'genre' => 'Tragedy, Realism, Modernism, Social Satire',
         'type' => 'novel',
         'price' => '$12.99',
+        'lang' => 'English',
+        'written' => [
+            'time' => '1923-1924',
+            'place' => 'America and France'
+        ],
+        'publication' => '1925',
+        'publisher' => 'Charles Scribner\'s Sons',
         'desc' => 'Nick Carraway, a young man from Minnesota, moves to New York in the summer of 1922 to learn about the bond business. He rents a house in the West Egg district of Long Island, a wealthy but unfashionable area populated by the new rich, a group who have made their fortunes too recently to have established social connections and who are prone to garish displays of wealth. Nick’s next-door neighbor in West Egg is a mysterious man named Jay Gatsby, who lives in a gigantic Gothic mansion and throws extravagant parties every Saturday night.',
-        'author' => 'Scott Fitzgerald',
+        'author' => 'F.Scott Fitzgerald',
         'quotes' => [
             'Class' => [
                 'They were careless people, Tom and Daisy—they smashed up things and . . . then retreated back into their money . . . and let other people clean up the mess they had made. ',
@@ -159,6 +191,14 @@ $data = [
         'type' => 'novel',
         'price' => '$10.15',
         'title' => 'Frankenstein',
+        'genre' => 'Gothic science fiction',
+        'lang' => 'English',
+        'written' => [
+            'time' => '1816-1817',
+            'place' => 'Switzerland, London'
+        ],
+        'publication' => '1 January 1818',
+        'publisher' => 'Lackington, Hughes, Harding, Mavor, & Jones',
         'desc' => 'In a series of letters, Robert Walton, the captain of a ship bound for the North Pole, recounts to his sister back in England the progress of his dangerous mission. Successful early on, the mission is soon interrupted by seas full of impassable ice. Trapped, Walton encounters Victor Frankenstein, who has been traveling by dog-drawn sledge across the ice and is weakened by the cold. Walton takes him aboard ship, helps nurse him back to health, and hears the fantastic tale of the monster that Frankenstein created.',
         'quotes' => [
             'ambition' => [
@@ -204,6 +244,14 @@ $data = [
         'title' => 'Robinson Crusoe',
         'price' => '$5.99',
         'type' => 'novel',
+        'genre' => 'Adventure story, novel of isolation',
+        'lang' => 'English',
+        'written' => [
+            'time' => '1719',
+            'place' => 'London, England'
+        ],
+        'publication' => '1719',
+        'publisher' => 'William Taylor',
         'desc' => 'Robinson Crusoe is an Englishman from the town of York in the seventeenth century, the youngest son of a merchant of German origin. Encouraged by his father to study law, Crusoe expresses his wish to go to sea instead. His family is against Crusoe going out to sea, and his father explains that it is better to seek a modest, secure life for oneself. Initially, Robinson is committed to obeying his father, but he eventually succumbs to temptation and embarks on a ship bound for London with a friend.',
         'author' => 'Daniel Defoe',
         'quotes' => [

@@ -11,47 +11,56 @@ function createDOMElementWithContent(string $elName, string $content): \DOMEleme
 }
 
 $doc = new DOMDocument('1.0', 'UTF-8');
-$rootEl = new DOMElement('library');
+$rootEl = new DOMElement('Library');
 $root = $doc->appendChild($rootEl);
-$booksEl = new DOMElement('books');
+$booksEl = new DOMElement('Books');
 $books = $root->appendChild($booksEl);
-$books->setAttribute('country', 'England');
-$books->setAttribute('city', 'London');
-$books->setAttribute('name', 'The London Library');
+$books->setAttribute('Country', 'England');
+$books->setAttribute('City', 'London');
+$books->setAttribute('Name', 'The London Library');
 
 foreach ($data as $b) {
-    $bookEl = new DOMElement('book');
+    $bookEl = new DOMElement('Book');
     $book = $books->appendChild($bookEl);
 
-    $book->setAttribute('id', $b['id']);
-    $book->setAttribute('type', $b['type']);
-    $book->setAttribute('price', $b['price']);
+    $written = $b['written'];
 
-    $title = createDOMElementWithContent('title', $b['title']);
-    $desc = createDOMElementWithContent('desc', $b['desc']);
-    $author = createDOMElementWithContent('author', $b['author']);
+    $book->setAttribute('ID', $b['id']);
+    $book->setAttribute('Type', $b['type']);
+    $book->setAttribute('Price', $b['price']);
+    $book->setAttribute('Lang', $b['lang']);
+    $book->setAttribute('Written_Time', $written['time']);
+    $book->setAttribute('Written_Place', $written['place']);
+
+    $title = createDOMElementWithContent('Title', $b['title']);
+    $desc = createDOMElementWithContent('Description', $b['desc']);
+    $author = createDOMElementWithContent('Author', $b['author']);
+    $genre = createDOMElementWithContent('Genre', $b['genre']);
+    $publication = createDOMElementWithContent('Publication', 'In ' . $b['publication'] . ' by ' . $b['publisher']);
 
     $book->appendChild($title);
     $book->appendChild($desc);
     $book->appendChild($author);
+    $book->appendChild($genre);
+    $book->appendChild($publication);
 
-    $quotesEl = new DOMElement('quotes');
+    $quotesEl = new DOMElement('Quotes');
     $quotes = $book->appendChild($quotesEl);
 
     foreach ($b['quotes'] as $key => $q) {
         $qType = $key;
         foreach ($q as $qContent) {
-            $quote = createDOMElementWithContent('quote', $qContent);
+            $quote = createDOMElementWithContent('Quote', $qContent);
             $quotes->appendChild($quote);
-            $quote->setAttribute('type', $qType);
+            $quote->setAttribute('Type', $qType);
         };
     }
 
-    $heroesEl = new DOMElement('heroes');
+    $heroesEl = new DOMElement('Heroes');
     $heroes = $book->appendChild($heroesEl);
 
     foreach ($b['heroes'] as $h) {
-        $hero = createDOMElementWithContent('name', $h['name']);
+        $hero = createDOMElementWithContent('Name', $h['name']);
         $heroes->appendChild($hero);
     }
 
